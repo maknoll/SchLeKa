@@ -1,0 +1,37 @@
+/* Author: Martin Knoll */
+
+body {
+width: 1000px;
+margin: 0 auto; 
+font-size: 1em;
+font-family: Georgia;
+color: #000;
+background: #fff;
+}
+
+a {
+color: #00a;
+}
+
+img {
+height: 600px;
+}
+
+div {
+position: absolute;
+width: 80%;
+left: 10%;
+top: 45%;
+}
+
+p {
+text-align: center;
+}
+
+a {
+color: #ccc;
+}
+
+p.solution {
+visibility: hidden;
+}
