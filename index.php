@@ -27,7 +27,7 @@ disconnect($db);
  </head>
  <body>
   <div>
-  <p><?php echo($values['question']); ?></p>
+  <p><?php echo(nl2br($values['question'])); ?></p>
 	<nav>
   <ul>
 	<li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
@@ -37,7 +37,7 @@ disconnect($db);
 	<li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
 	<ul>
 	</nav>
-  <p class="solution" id="solution"><?php echo($values['solution']); ?></p>
+  <p class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></p>
   <div>
  </body>
 </html>
