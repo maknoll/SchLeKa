@@ -15,7 +15,7 @@
 		
 		$db = connect();
 		
-		$id = (isset($_GET['question']) ? pg_escape_string($_GET['question']) : 1;
+		$id = isset($_GET['question']) ? pg_escape_string($_GET['question']) : 1;
 		
 		$result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 		
