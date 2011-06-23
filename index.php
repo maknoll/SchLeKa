@@ -1,3 +1,15 @@
+<?php
+include('includes/db.php');
+$db = connect();
+
+$result = pg_query($db, "SELECT * FROM questions");
+
+while ($row = pg_fetch_assoc($result)) {
+	echo $row;
+}
+
+?>
+
 <!doctype html> 
 <html>
  <head>
