@@ -13,10 +13,10 @@
    <form action="new.php" method="GET">
     
 	<p>Frage</p>
-    <textarea name="question" cols="64" rows="8"> </textarea>
+    <p><textarea name="question" cols="64" rows="8"> </textarea></p>
 
 	<p>Lösung</p>
-	<textarea name="solution" cols="64" rows="8"> </textarea>
+	<p><textarea name="solution" cols="64" rows="8"> </textarea></p>
 
 	<p><input type="submit" value="Senden"><p>
 
