@@ -32,7 +32,7 @@ disconnect($db);
   <ul>
 	<li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
 	<li><a href="#" onclick="showSolution()">Antwort</a></li>
-  <li><a href="change.php?question=<?php echo($id); ?>">ändern</a></li>
+  <li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
 	<li><a href="new_form.php">neu</a></li>
 	<li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
 	<ul>
