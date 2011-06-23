@@ -28,17 +28,16 @@ disconnect($db);
  <body>
   <div>
   <p><?php echo(nl2br($values['question'])); ?></p>
-	<nav>
-  <ul>
-	<li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
-	<li><a href="#" onclick="showSolution()">Antwort</a></li>
-  <li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
-	<li><a href="new_form.php">neu</a></li>
-	<li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
-	</ul>
-	</nav>
-	<div>
-     <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
-    </div>
+  <nav>
+   <ul>
+    <li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
+    <li><a href="#" onclick="showSolution()">Antwort</a></li>
+	<li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
+    <li><a href="new_form.php">neu</a></li>
+    <li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
+   </ul>
+  </nav>
+  <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
+  </div>
  </body>
 </html>
