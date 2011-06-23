@@ -1,11 +1,11 @@
 <?php
 	session_start();
 	//init variables  
-	$cf = array();  
+	$rd = array();  
 	$sr = false;  
   
-	if(isset($_SESSION['cf_returndata'])) {  
-		$cf = $_SESSION['cf_returndata'];  
+	if(isset($_SESSION['returndata'])) {  
+		$rd = $_SESSION['returndata'];  
 		$sr = true;
 	}
 	session_destroy();
@@ -21,16 +21,17 @@
  </head>
  <body>
   <div id="form">
-   <ul id="errors" style="display:<?php echo ($sr && !$cf['form_ok']) ? 'block' : 'none'; ?>">  
+   <ul id="errors" style="display:<?php echo ($sr && !$rd['form_ok']) ? 'block' : 'none'; ?>">  
 	<li id="info">Folgende Fehler sind aufgetreten:</li>
 	<?php  		
-	    if(isset($cf['errors']) && count($cf['errors']) > 0) :
-	    	foreach($cf['errors'] as $error) : ?>
+	    if(isset($rd['errors']) && count($rd['errors']) > 0) :
+	    	foreach($rd['errors'] as $error) : ?>
 	    		<li><?php echo $error ?></li>  
 	<?php  
 	    	endforeach;  
 	    endif;  
 	?> 
+   </ul>
    <form action="new.php" method="POST">
     
 	<p>Frage</p>
