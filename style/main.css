@@ -41,6 +41,8 @@ a {
 
 p.solution {
 	visibility: hidden;
+	text-align: left;
+	margin: 0 auto;
 }
 
 nav ul{
