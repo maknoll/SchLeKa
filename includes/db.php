@@ -1,7 +1,7 @@
 <?php
 
 function connect() {
-	$db = pg_connect("host=localhost dbname=schleka user=www-data");
+	$db = pg_connect("dbname=schleka");
 	return $db;
 }
 
