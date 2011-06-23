@@ -10,6 +10,8 @@
 	}
 	session_destroy();
 
+	include('includes/db.php');
+
 	$db = connect();
 	
 	if (isset($_GET['question']))
