@@ -1,13 +1,14 @@
 <?php
 if(isset($_POST)) {
-	include('includes/db.php');
 	
+	include('includes/db.php');
 	
 	//form validation vars
     $formok = true;
     $errors = array();
 	
     //form data
+    $id = pg_escape_string($_POST['id']);
     $question = pg_escape_string($_POST['question']);
     $solution = pg_escape_string($_POST['solution']);
     $lecture = pg_escape_string($_POST['lecture']);
@@ -37,7 +38,7 @@ if(isset($_POST)) {
       $db = connect();
 	  
       // insert into db
-      pg_query($db, "INSERT INTO questions (question, solution, lecture, slide) VALUES ('{$question}', '{$solution}', '{$lecture}', {$slide})");
+      pg_query($db, "UPDATE questions SET question = '{$question}', solution = '{$solution}', lecture = '{$lecture}', slide = {$slide} WHERE id = {$id}");
 
 	  disconnect($db);
 	}
@@ -54,11 +55,15 @@ if(isset($_POST)) {
         'errors' => $errors
     );
     
+    if(!$formok) {
+    	//set session variables
+    	session_start();
+    	$_SESSION['returndata'] = $returndata;
+		
+    	//redirect back to form
+    	header('location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+    	header('location: http://martinknoll.org/schleka/?question=' . $id );
+    }
     
-    //set session variables
-    session_start();
-    $_SESSION['returndata'] = $returndata;
-
-    //redirect back to form
-    header('location: ' . $_SERVER['HTTP_REFERER']);
 }
