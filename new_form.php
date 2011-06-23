@@ -44,7 +44,7 @@
 	<p><textarea name="solution" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['solution'] : '' ?></textarea></p>
 	
 	<p>
-	Vorlesung <input name="lecture" type="text" size="32" maxlength="32" value="<?php echo $sr ? $rd['posted_form_data']['lecture'] : '' ?>">
+	Vorlesung <input name="lecture" type="text" size="32" maxlength="32" value="<?php echo $sr ? $rd['posted_form_data']['lecture'] : '' ?>" id="lecture">
 	Foliennummer <input name="slide" type="text" size="4" maxlength="4" value="<?php echo $sr ? $rd['posted_form_data']['slide'] : '' ?>">
 	</p>
 

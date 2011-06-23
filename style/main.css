@@ -1,100 +1,108 @@
 /* Author: Martin Knoll */
 
 body {
-width: 1000px;
-margin: 0 auto; 
-font-size: 1em;
-font-family: Georgia;
-color: #000;
-background: #fff;
+	width: 1000px;
+	margin: 0 auto; 
+	font-size: 1em;
+	font-family: Georgia;
+	color: #000;
+	background: #fff;
 }
 
 a {
-color: #00a;
+	color: #00a;
 }
 
 img {
-height: 600px;
+	height: 600px;
 }
 
 div {
-position: absolute;
-width: 80%;
-left: 10%;
-top: 45%;
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 45%;
 }
 
 div#form {
-position: absolute;
-width: 80%;
-left: 10%;
-top: 10%;
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 10%;
 }
 
 p {
-text-align: center;
+	text-align: center;
 }
 
 a {
-color: #ccc;
+	color: #ccc;
 }
 
 p.solution {
-visibility: hidden;
+	visibility: hidden;
 }
 
 nav ul{
-padding: 0;
-margin: 1.5em 0 0 0;
-text-align: center;
+	padding: 0;
+	margin: 1.5em 0 0 0;
+	text-align: center;
 }
 
 nav li {
-margin: 0 10px;
-display: inline;
-list-style: none;
-padding: 7px;
-cursor: pointer;
+	margin: 0 10px;
+	display: inline;
+	list-style: none;
+	padding: 7px;
+	cursor: pointer;
+}
+
+input {
+	margin-left: 5px;
 }
 
 #errors {
-  border:solid 1px #E58E8E;
-  padding: 8px;
-  margin:15px auto;
-  display:block;
-  width:465px;
-  -webkit-border-radius:8px;
-  -moz-border-radius:8px;
-  border-radius:8px;
-  background:#FFE6E6;
+	border:solid 1px #E58E8E;
+	padding: 8px;
+	margin:15px auto;
+	display:block;
+	width:449px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	background:#FFE6E6;
 }
 
 #errors li {
-    padding:2px;
-    list-style:none;
+	padding:2px;
+	list-style:none;
 }
 
 #errors li:before {
-    content: ' - ';
+	content: ' - ';
 }
 
 #errors #info {
-    font-weight:bold;
+	font-weight:bold;
 }
 
 #errors #info:before {
-    content: '';
+	content: '';
 }
 
 #success {
-    border:solid 1px #83D186;
-    padding: 8px;
-    margin:15px auto;
-    display:block;
-    width:465px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    border-radius:8px;
-    background:#D3EDD3;
-    font-weight:bold;
+	border:solid 1px #83D186;
+	padding: 8px;
+	margin:15px auto;
+	display:block;
+	width:449px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	background:#D3EDD3;
+	font-weight:bold;
+}
+
+#lecture {
+	margin-right: 30px;
 }
