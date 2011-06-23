@@ -24,14 +24,20 @@
    <ul id="errors" style="display:<?php echo ($sr && !$rd['form_ok']) ? 'block' : 'none'; ?>">  
 	<li id="info">Folgende Fehler sind aufgetreten:</li>
 	<?php  		
+		
+		print_r($rd);
+		
 	    if(isset($rd['errors']) && count($rd['errors']) > 0) :
 	    	foreach($rd['errors'] as $error) : ?>
 	    		<li><?php echo $error ?></li>  
 	<?php  
 	    	endforeach;  
 	    endif;  
-	?> 
+	?>
    </ul>
+   
+   <p id="success"  style="display:<?php echo ($sr && $rd['form_ok']) ? 'block' : 'none'; ?>">Vielen Dank! SchLeKa erfolgreich gespeichert.</p> 
+   
    <form action="new.php" method="POST">
     
 	<p>Frage</p>
