@@ -53,7 +53,7 @@
    
    <form action="change.php" method="POST">
 
-   	<input type="hidden" name="id" value="<?php echo($values['ID']) ?>">
+   	<input type="hidden" name="id" value="<?php echo($values['id']) ?>">
     
 	<p>Frage</p>
     <p><textarea name="question" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['question'] : $values['question'] ?></textarea></p>
