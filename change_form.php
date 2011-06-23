@@ -54,14 +54,14 @@
    	<input type="hidden" name="id" value="<?php echo($values['ID']) ?>">
     
 	<p>Frage</p>
-    <p><textarea name="question" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['question'] : echo($values['question']) ?></textarea></p>
+    <p><textarea name="question" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['question'] : $values['question'] ?></textarea></p>
 
 	<p>Lösung</p>
-	<p><textarea name="solution" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['solution'] : echo($values['solution']) ?></textarea></p>
+	<p><textarea name="solution" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['solution'] : $values['solution'] ?></textarea></p>
 	
 	<p>
 	Vorlesung <input name="lecture" type="text" size="32" maxlength="32" value="<?php echo $sr ? $rd['posted_form_data']['lecture'] : echo($values['lecture']) ?>" id="lecture">
-	Foliennummer <input name="slide" type="text" size="4" maxlength="4" value="<?php echo $sr ? $rd['posted_form_data']['slide'] : echo($values['slide']) ?>">
+	Foliennummer <input name="slide" type="text" size="4" maxlength="4" value="<?php echo $sr ? $rd['posted_form_data']['slide'] : $values['slide'] ?>">
 	</p>
 
 	<p><input type="submit" value="Senden"><p>
