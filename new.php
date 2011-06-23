@@ -31,11 +31,11 @@ if(isset($_POST)) {
 	
 	if($formok) {
       $db = connect();
-
-	  disconnect($db);
 	  
       // insert into db
       pg_query("INSERT INTO questions (question, solution, lecture, slide) VALUES ('{$question}', '{$solution}', '{$lecture}', '{$slide}')");
+
+	  disconnect($db);
 	}
 	
 	//what we need to return back to our form
