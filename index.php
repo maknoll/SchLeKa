@@ -38,6 +38,5 @@ disconnect($db);
    </ul>
   </nav>
   <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
-  </div>
  </body>
 </html>
