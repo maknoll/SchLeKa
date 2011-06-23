@@ -20,7 +20,7 @@
 	
 	<p>
 	Vorlesung <input name="lecture" type="text" size="32" maxlength="32">
-	Foliennummer <input name="Vorname" type="text" size="32" maxlength="32">
+	Foliennummer <input name="Vorname" type="text" size="4" maxlength="4">
 	</p>
 
 	<p><input type="submit" value="Senden"><p>
