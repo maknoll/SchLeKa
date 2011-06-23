@@ -35,7 +35,7 @@ disconnect($db);
   <li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
 	<li><a href="new_form.php">neu</a></li>
 	<li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
-	<ul>
+	</ul>
 	</nav>
   <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
   <div>

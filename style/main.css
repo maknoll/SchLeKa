@@ -50,6 +50,7 @@ nav ul{
 	padding: 0;
 	margin: 1.5em 0 0 0;
 	text-align: center;
+	display: block;
 }
 
 nav li {
