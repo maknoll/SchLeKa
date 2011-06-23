@@ -4,9 +4,7 @@ $db = connect();
 
 $result = pg_query($db, "SELECT * FROM questions");
 
-while ($row = pg_fetch_assoc($result)) {
-	echo $row;
-}
+$values = pg_fetch_assoc($result);
 
 ?>
 
@@ -21,7 +19,7 @@ while ($row = pg_fetch_assoc($result)) {
  </head>
  <body>
   <div>
-  <p>Was ist ein Perspektivwechsel und wozu dient er?</p>
+  <p><?php echo($values['question']); ?></p>
 	<nav>
   <ul>
 	<li><a href="?question=1">vorherige Frage</a></li>
@@ -31,7 +29,7 @@ while ($row = pg_fetch_assoc($result)) {
 	<li><a href="?question=3">nächste Frage</a></li>
 	<ul>
 	</nav>
-  <p class="solution" id="solution">Durch dem Perspektivwechsel entstehen neue Blickwinkel.<br>
+  <p class="solution" id="solution"><?php echo($values['solution']); ?><br>
   Ein Perspektivwechsel überwindet Denkblokaden</p>
   <div>
  </body>
