@@ -1,8 +1,14 @@
 <?php
 include('includes/db.php');
+
 $db = connect();
 
-$result = pg_query($db, "SELECT * FROM questions");
+if (isset($_GET['question'])
+	$id = $_GET['question'];
+else
+	$id = 1;
+
+$result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
 $values = pg_fetch_assoc($result);
 
@@ -29,8 +35,7 @@ $values = pg_fetch_assoc($result);
 	<li><a href="?question=3">nächste Frage</a></li>
 	<ul>
 	</nav>
-  <p class="solution" id="solution"><?php echo($values['solution']); ?><br>
-  Ein Perspektivwechsel überwindet Denkblokaden</p>
+  <p class="solution" id="solution"><?php echo($values['solution']); ?></p>
   <div>
  </body>
 </html>
