@@ -24,6 +24,13 @@ left: 10%;
 top: 45%;
 }
 
+div#form {
+position: absolute;
+width: 80%;
+left: 10%;
+top: 30%;
+}
+
 p {
 text-align: center;
 }

@@ -8,7 +8,7 @@
   <script type="text/javascript" src="script/ajax.js"></script>	
  </head>
  <body>
-  <div>
+  <div id="form">
    
    <form action="new.php" method="POST">
     
