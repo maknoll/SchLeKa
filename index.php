@@ -12,6 +12,8 @@ $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
 $values = pg_fetch_assoc($result);
 
+disconnect($db);
+
 ?>
 
 <!doctype html> 
@@ -31,8 +33,8 @@ $values = pg_fetch_assoc($result);
 	<li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
 	<li><a href="#" onclick="showSolution()">Antwort</a></li>
   <li><a href="change.php?question=<?php echo($id); ?>">ändern</a></li>
-	<li><a href="new.php">neu</a></li>
-	<li><a href="?question=<?php echo($id-1); ?>">nächste Frage</a></li>
+	<li><a href="new_form.php">neu</a></li>
+	<li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
 	<ul>
 	</nav>
   <p class="solution" id="solution"><?php echo($values['solution']); ?></p>
