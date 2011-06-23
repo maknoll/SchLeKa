@@ -1,3 +1,15 @@
+<?php
+	session_start();
+	//init variables  
+	$cf = array();  
+	$sr = false;  
+  
+	if(isset($_SESSION['cf_returndata'])) {  
+		$cf = $_SESSION['cf_returndata'];  
+		$sr = true;
+	}
+	session_destroy();
+?>
 <!doctype html> 
 <html>
  <head>
@@ -9,7 +21,16 @@
  </head>
  <body>
   <div id="form">
-   
+   <ul id="errors" style="display:<?php echo ($sr && !$cf['form_ok']) ? 'block' : 'none'; ?>">  
+	<li id="info">Folgende Fehler sind aufgetreten:</li>
+	<?php  		
+	    if(isset($cf['errors']) && count($cf['errors']) > 0) :
+	    	foreach($cf['errors'] as $error) : ?>
+	    		<li><?php echo $error ?></li>  
+	<?php  
+	    	endforeach;  
+	    endif;  
+	?> 
    <form action="new.php" method="POST">
     
 	<p>Frage</p>
