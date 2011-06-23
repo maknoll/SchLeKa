@@ -68,6 +68,11 @@ input {
 	margin-left: 5px;
 }
 
+select {
+	margin-left: 5px;
+	width: 180px;
+}
+
 #errors {
 	border:solid 1px #E58E8E;
 	padding: 8px;
