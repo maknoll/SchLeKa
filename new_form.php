@@ -23,10 +23,7 @@
   <div id="form">
    <ul id="errors" style="display:<?php echo ($sr && !$rd['form_ok']) ? 'block' : 'none'; ?>">  
 	<li id="info">Folgende Fehler sind aufgetreten:</li>
-	<?php  		
-		
-		print_r($rd);
-		
+	<?php
 	    if(isset($rd['errors']) && count($rd['errors']) > 0) :
 	    	foreach($rd['errors'] as $error) : ?>
 	    		<li><?php echo $error ?></li>  
@@ -41,14 +38,14 @@
    <form action="new.php" method="POST">
     
 	<p>Frage</p>
-    <p><textarea name="question" cols="64" rows="8"> </textarea></p>
+    <p><textarea name="question" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['question'] : '' ?></textarea></p>
 
 	<p>Lösung</p>
-	<p><textarea name="solution" cols="64" rows="8"> </textarea></p>
+	<p><textarea name="solution" cols="64" rows="8"><?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['solution'] : '' ?></textarea></p>
 	
 	<p>
-	Vorlesung <input name="lecture" type="text" size="32" maxlength="32">
-	Foliennummer <input name="slide" type="text" size="4" maxlength="4">
+	Vorlesung <input name="lecture" type="text" size="32" maxlength="32" value="<?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['lecture'] : '' ?>">
+	Foliennummer <input name="slide" type="text" size="4" maxlength="4" value="<?php echo ($sr && !$rd['form_ok']) ? $rd['posted_form_data']['slide'] : '' ?>">
 	</p>
 
 	<p><input type="submit" value="Senden"><p>
