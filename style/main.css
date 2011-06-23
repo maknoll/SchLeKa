@@ -42,9 +42,8 @@ a {
 div.solution {
 	visibility: hidden;
 	text-align: left;
-	margin: 0 auto;
-	padding-top: 5em;
-	width: 500px;
+	margin: 3 40% 0 auto;
+	width: 600px;
 }
 
 nav {
