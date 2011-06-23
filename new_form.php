@@ -10,7 +10,7 @@
  <body>
   <div>
    
-   <form action="new.php" method="GET">
+   <form action="new.php" method="POST">
     
 	<p>Frage</p>
     <p><textarea name="question" cols="64" rows="8"> </textarea></p>
