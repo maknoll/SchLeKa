@@ -18,7 +18,7 @@ if(isset($_POST)) {
 		$errors[] = "Gib bitte eine Frage ein!";
 	} elseif(strlen($question) < 11) {
 		$formok = false;
-		$errors[] = "Gib bitte mindestens 10 Zeichen fŸr die Frage ein.";
+		$errors[] = "Gib bitte mindestens 10 Zeichen fÃ¼r die Frage ein.";
 	}
 	
 	if(empty($solution)) {
@@ -26,7 +26,7 @@ if(isset($_POST)) {
 		$errors[] = "Gib bitte eine Antwort ein!";
 	} elseif(strlen($solution) < 11) {
 		$formok = false;
-		$errors[] = "Gib bitte mindestens 10 Zeichen fŸr die Antwort ein.";
+		$errors[] = "Gib bitte mindestens 10 Zeichen fÃ¼r die Antwort ein.";
 	}
 	
 	if(empty($slide)) {
