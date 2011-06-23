@@ -17,6 +17,11 @@
 
 	<p>Lösung</p>
 	<p><textarea name="solution" cols="64" rows="8"> </textarea></p>
+	
+	<p>
+	Vorlesung <input name="lecture" type="text" size="32" maxlength="32">
+	Foliennummer <input name="Vorname" type="text" size="32" maxlength="32">
+	</p>
 
 	<p><input type="submit" value="Senden"><p>
 
