@@ -3,7 +3,7 @@ include('includes/db.php');
 
 $db = connect();
 
-if (isset($_GET['question'])
+if (isset($_GET['question']))
 	$id = $_GET['question'];
 else
 	$id = 1;
