@@ -29,6 +29,10 @@ if(isset($_POST)) {
 		$error[] = "Deine Antwort sollte mindestens 10 Zeichen lang sein.";
 	}
 	
+	if(empty($slide)) {
+		$slide = 0;
+	}
+	
 	if($formok) {
       $db = connect();
 	  
