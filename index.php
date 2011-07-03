@@ -48,7 +48,7 @@ disconnect($db);
 		});
 		
 		$('#searchbar a.search').click(function() {
-  			alert('So schnell bin ich nun auch wieder nicht...');
+  			alert('Suchfunktion in Arbeit...');
 		});
     });
   </script>
