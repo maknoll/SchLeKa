@@ -114,7 +114,7 @@ $lecture = array( "WS 01 - Einführung",
       <br>
       <?php
       if(isset($_GET['lecture']))
-         echo "Filter: " . $lecture[$_GET['lecture']-1] . "<a href='/'><img src='img/cross.png' id='remove'></a>";
+         echo "Filter: " . $lecture[$_GET['lecture']-1] . "<a href='/schleka/'><img src='img/cross.png' id='remove'></a>";
       ?>
     </div>
     <div id="question">
