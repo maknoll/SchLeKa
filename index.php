@@ -92,7 +92,7 @@ disconnect($db);
      <nav>
       <ul>
        <li><a href="?question=<?php echo(isset($_GET['lecture']) ? $previous . "&lecture={$_GET['lecture']}" : $previous); ?>">vorherige Frage</a></li>
-       <li><a href="#" onclick="showSolution()">Antwort</a></li>
+       <li><a href="#" onclick="$('#solution').show();">Antwort</a></li>
      	<li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
        <li><a href="new_form.php">neu</a></li>
        <li><a href="?question=<?php echo(isset($_GET['lecture']) ? $next . "&lecture={$_GET['lecture']}" : $next); ?>">nächste Frage</a></li>
