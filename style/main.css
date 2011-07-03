@@ -15,10 +15,6 @@ p {
 	text-align: center;
 }
 
-img {
-	height: 600px;
-}
-
 nav {
 	display: block;
 }
@@ -70,6 +66,7 @@ div#form {
 div#searchbar {
 	position: relative;
 	text-align: center;
+	color: #ccc;
 }
 
 div#searchbar a.menu {
@@ -80,6 +77,12 @@ div#searchbar a.menu {
 	overflow: hidden;
 	text-indent: -9999px;
 	margin: 5px;
+}
+
+div#searchbar #remove {
+	display: inline;
+	margin: -1px 8px;
+	border: 0px;
 }
 
 div#searchbar a.search {

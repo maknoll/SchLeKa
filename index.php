@@ -28,6 +28,31 @@ $values = pg_fetch_assoc($result);
 
 disconnect($db);
 
+// Selected Lecture
+
+$lecture = array( "WS 01 - Einführung",
+"WS 02 - Erfolg im Studium",
+"WS 03 - Lerntechniken",
+"WS 04 - Ziele 1",
+"WS 05 - Ziele 2",
+"WS 06 - Zeitmanagement 1",
+"WS 07 - Zeitmanagement 2",
+"WS 08 - Präsentationen 1",
+"WS 09 - Präsentationen 2 (Visualisierung)",
+"WS 10 - Präsentationen 3 (Auftritt)",
+"WS 11 - Ideen generieren",
+"SS 01 - Projektmanagement",
+"SS 02 - Teamwork",
+"SS 03 - Diskussionen leiten",
+"SS 04 - Temperamente",
+"SS 05 - Die vier Seiten einer Nachricht",
+"SS 06 - Innovation and Entrepreneurship",
+"SS 07 - Erfolg 1",
+"SS 08 - Erfolg 2",
+"SS 09 - Wissenschaftliches Arbeiten 1",
+"SS 10 - Wissenschaftliches Arbeiten 2",
+"SS 11 - Informatik-Ethik");
+
 ?>
 
 <!doctype html> 
@@ -86,6 +111,11 @@ disconnect($db);
       </div>
       <a href="#" class="menu search">Suche</a>
       <span id="search"></span>
+      <br>
+      <?php
+      if(isset($_GET['lecture']))
+         echo "Filter: " . $lecture[$_GET['lecture']-1] . "<a href='?question=". $_GET['question'] ."'><img src='/img/cross.png' id='remove'></a>";
+      ?>
     </div>
     <div id="question">
      <p><?php echo(nl2br($values['question'])); ?></p>
