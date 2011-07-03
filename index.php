@@ -9,7 +9,7 @@ else
 	$id = 1;
 
 if (isset($_GET['lecture']))
-	$filter = "AND lecture = '". pg_escape_string($_GET['lexture']) . "'";
+	$filter = "AND lecture = '". pg_escape_string($_GET['lecture']) . "'";
 
 $previous = pg_fetch_result(pg_query($db, "SELECT max(ID) FROM questions WHERE ID < $id $filter"),0);
 $next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions WHERE ID > $id $filter"),0);
