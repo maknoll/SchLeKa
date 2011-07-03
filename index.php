@@ -8,13 +8,8 @@ if (isset($_GET['question']))
 else
 	$id = 1;
 
-if (isset($_GET['filter'])) {
-	
-}
-else {
-	$previous = $id - 1;
-	$next = $id + 1;
-}
+$previous = pg_fetch_result(pg_query($db, "SELECT max(ID) FROM questions WHERE ID < $id"));
+$next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions WHERE ID > $id"));
 
 $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
