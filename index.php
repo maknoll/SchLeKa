@@ -4,7 +4,7 @@ include('includes/db.php');
 $db = connect();
 
 if (isset($_GET['question']))
-	$id = $_GET['question'];
+	$id = pg_escape_string($_GET['question']);
 else
 	$id = 1;
 
