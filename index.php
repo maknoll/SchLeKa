@@ -11,6 +11,12 @@ else
 $previous = pg_fetch_result(pg_query($db, "SELECT max(ID) FROM questions WHERE ID < $id"),0);
 $next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions WHERE ID > $id"),0);
 
+if ($previous == empty)
+	$previous = pg_fetch_result(pg_query($db, "SELECT max(ID) FROM questions"),0);
+
+if ($next == empty)
+	$next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions"),0);
+
 $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
 $values = pg_fetch_assoc($result);
