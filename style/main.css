@@ -90,11 +90,11 @@ div#searchbar a.menu {
 }
 
 div#searchbar a.search {
-	background: url("img/lupe.png") no-repeat center center;
+	background: url("../img/lupe.png") no-repeat center center;
 }
 
 div#searchbar a.lectureset {
-	background: url("img/zahnrad.png") no-repeat center center;
+	background: url("../img/zahnrad.png") no-repeat center center;
 }
 
 div#searchbar #lectureset {
