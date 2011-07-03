@@ -1,49 +1,29 @@
 /* Author: Martin Knoll */
 
+* 
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
 body {
-	width: 1000px;
-	margin: 0 auto; 
-	font-size: 1em;
 	font-family: Georgia;
 	color: #000;
 	background: #fff;
 }
 
+
 a {
-	color: #00a;
-}
-
-img {
-	height: 600px;
-}
-
-div {
-	position: absolute;
-	width: 80%;
-	left: 10%;
-	top: 45%;
-}
-
-div#form {
-	position: absolute;
-	width: 80%;
-	left: 10%;
-	top: 10%;
+	color: #ccc;
 }
 
 p {
 	text-align: center;
 }
 
-a {
-	color: #ccc;
-}
-
-div.solution {
-	visibility: hidden;
-	text-align: left;
-	margin: 4em auto 0 auto;
-	width: 800px;
+img {
+	height: 600px;
 }
 
 nav {
@@ -71,6 +51,79 @@ input {
 select {
 	margin-left: 5px;
 	width: 180px;
+}
+
+div#wrapper {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto; 
+	font-size: 1em;
+}
+
+div#question {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 45%;
+}
+
+div#form {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 10%;
+}
+
+div#searchbar {
+	position: relative;
+	text-align: center;
+}
+
+div#searchbar a.menu {
+	display: inline-block;
+	color: white;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	text-indent: -9999px;
+	margin: 5px;
+}
+
+div#searchbar a.search {
+	background: url("/img/lupe.png") no-repeat center center;
+}
+
+div#searchbar a.lectureset {
+	background: url("/img/zahnrad.png") no-repeat center center;
+}
+
+div#searchbar #lectureset {
+	position: absolute;
+	z-index: 10000;
+	left: 300px;
+	top: 40px;
+	margin: 0px;
+	padding: 30px;
+	background: #ccc;
+	color: #fff;
+	border-radius: 10px;
+	text-align: left;
+}
+
+div#searchbar #lectureset ul {
+	padding: 10px 10px 0px 20px;
+	margin: 0;
+}
+
+div#searchbar #lectureset a {
+	color: black;
+}
+
+div.solution {
+	visibility: hidden;
+	text-align: left;
+	margin: 4em auto 0 auto;
+	width: 800px;
 }
 
 #errors {
