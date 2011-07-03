@@ -18,7 +18,7 @@ if (empty($previous))
 	$previous = pg_fetch_result(pg_query($db, "SELECT max(ID) FROM questions WHERE true $filter"),0);
 
 if (empty($next))
-	$next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions WHERE true $filter""),0);
+	$next = pg_fetch_result(pg_query($db, "SELECT min(ID) FROM questions WHERE true $filter"),0);
 
 $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
