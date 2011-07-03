@@ -8,9 +8,17 @@ if (isset($_GET['question']))
 else
 	$id = 1;
 
+if (isset($_GET['filter']))
+
+else
+	$previous = $id - 1;
+	$next = $id + 1:
+
 $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
 $values = pg_fetch_assoc($result);
+
+
 
 disconnect($db);
 
@@ -30,11 +38,11 @@ disconnect($db);
   <p><?php echo(nl2br($values['question'])); ?></p>
   <nav>
    <ul>
-    <li><a href="?question=<?php echo($id-1); ?>">vorherige Frage</a></li>
+    <li><a href="?question=<?php echo($previous); ?>">vorherige Frage</a></li>
     <li><a href="#" onclick="showSolution()">Antwort</a></li>
 	<li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
     <li><a href="new_form.php">neu</a></li>
-    <li><a href="?question=<?php echo($id+1); ?>">nächste Frage</a></li>
+    <li><a href="?question=<?php echo($next); ?>">nächste Frage</a></li>
    </ul>
   </nav>
   <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
