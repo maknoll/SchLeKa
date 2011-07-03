@@ -8,11 +8,13 @@ if (isset($_GET['question']))
 else
 	$id = 1;
 
-if (isset($_GET['filter']))
-
-else
+if (isset($_GET['filter'])) {
+	
+}
+else {
 	$previous = $id - 1;
-	$next = $id + 1:
+	$next = $id + 1;
+}
 
 $result = pg_query($db, "SELECT * FROM questions WHERE ID=$id");
 
