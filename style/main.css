@@ -1,4 +1,4 @@
-/* Author: Martin Knoll */
+/* Author: Florian Ludwig, Martin Knoll */
 
 body {
 	font-family: Georgia;
@@ -40,6 +40,10 @@ input {
 select {
 	margin-left: 5px;
 	width: 180px;
+}
+
+form#search {
+	display: none;
 }
 
 div#wrapper {
@@ -90,7 +94,7 @@ div#searchbar a.search {
 }
 
 div#searchbar a.lectureset {
-	background: url("../img/zahnrad.png") no-repeat center center;
+	background: url("../img/zahnrad2.png") no-repeat center center;
 }
 
 div#searchbar #lectureset {

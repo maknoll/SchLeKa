@@ -63,17 +63,26 @@ $lecture = array( "WS 01 - Einführung",
   <link rel="stylesheet" href="style/typoframework.css" type="text/css" /> 
   <link rel="stylesheet" href="style/main.css" type="text/css" />
   <script type="text/javascript" src="script/jquery.js"></script>
+  <script type="text/javascript" src="script/jquery-ui.js"></script>
   <script>
   	$(document).ready(function(){
-  		
-  		$('#lectureset').hide();
   		
      	$('#searchbar a.lectureset').click(function() {
   			$('#lectureset').toggle();
 		});
 		
+		$('#searchfield').autocomplete({
+			source: "search.php",
+			minLength: 2,
+			select: function( event, ui ) {
+				log( ui.item ?
+					"Selected: " + ui.item.value + " aka " + ui.item.id :
+					"Nothing selected, input was " + this.value );
+			}
+		});
+		
 		$('#searchbar a.search').click(function() {
-  			alert('Suchfunktion in Arbeit...');
+  			$('#search').toggle();
 		});
     });
   </script>
@@ -110,7 +119,9 @@ $lecture = array( "WS 01 - Einführung",
       	</ul>
       </div>
       <a href="#" class="menu search">Suche</a>
-      <span id="search"></span>
+      <form method="get" id="search" action="#">
+      	<input id="searchfield" name="searchstring" placeholder="Suchtext...">
+      </form>
       <br>
       <?php
       if(isset($_GET['lecture']))
