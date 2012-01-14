@@ -17,7 +17,6 @@
   <title>Schlüko Lernkarten</title>
   <link rel="stylesheet" href="style/typoframework.css" type="text/css" /> 
   <link rel="stylesheet" href="style/main.css" type="text/css" />
-  <script type="text/javascript" src="script/ajax.js"></script>	
  </head>
  <body>
   <div id="form">
@@ -46,28 +45,16 @@
 	<p>
 	Vorlesung
 	<select name="lecture" id="lecture">
-		<option value="1" <?php echo ($sr &&$rd['posted_form_data']['lecture'] == '1') ? "selected='selected'" : '' ?>>WS 01 - Einführung</option>
-		<option value="2" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '2') ? "selected='selected'" : '' ?>>WS 02 - Erfolg im Studium</option>
-		<option value="3" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '3') ? "selected='selected'" : '' ?>>WS 03 - Lerntechniken</option>
-		<option value="4" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '4') ? "selected='selected'" : '' ?>>WS 04 - Ziele 1</option>
-		<option value="5" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '5') ? "selected='selected'" : '' ?>>WS 05 - Ziele 2</option>
-		<option value="6" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '6') ? "selected='selected'" : '' ?>>WS 06 - Zeitmanagement 1</option>
-		<option value="7" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '7') ? "selected='selected'" : '' ?>>WS 07 - Zeitmanagement 2</option>
-		<option value="8" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '8') ? "selected='selected'" : '' ?>>WS 08 - Präsentationen 1</option>
-		<option value="9" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '9') ? "selected='selected'" : '' ?>>WS 09 - Präsentationen 2 (Visualisierung)</option>
-		<option value="10" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '10') ? "selected='selected'" : '' ?>>WS 10 - Präsentationen 3 (Auftritt)</option>
-		<option value="11" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '11') ? "selected='selected'" : '' ?>>WS 11 - Ideen generieren</option>
-		<option value="12" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '12') ? "selected='selected'" : '' ?>>SS 01 - Projektmanagement</option>
-		<option value="13" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '13') ? "selected='selected'" : '' ?>>SS 02 - Teamwork</option>
-		<option value="14" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '14') ? "selected='selected'" : '' ?>>SS 03 - Diskussionen leiten</option>
-		<option value="15" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '15') ? "selected='selected'" : '' ?>>SS 04 - Temperamente</option>
-		<option value="16" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '16') ? "selected='selected'" : '' ?>>SS 05 - Die vier Seiten einer Nachricht</option>
-		<option value="17" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '17') ? "selected='selected'" : '' ?>>SS 06 - Innovation and Entrepreneurship</option>
-		<option value="18" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '18') ? "selected='selected'" : '' ?>>SS 07 - Erfolg 1</option>
-		<option value="19" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '19') ? "selected='selected'" : '' ?>>SS 08 - Erfolg 2</option>
-		<option value="20" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '20') ? "selected='selected'" : '' ?>>SS 09 - Wissenschaftliches Arbeiten 1</option>
-		<option value="21" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '21') ? "selected='selected'" : '' ?>>SS 10 - Wissenschaftliches Arbeiten 2</option>
-		<option value="22" <?php echo ($sr && $rd['posted_form_data']['lecture'] == '22') ? "selected='selected'" : '' ?>>SS 11 - Informatik-Ethik</option>
+		<option value="1"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '1' ) || $values['lecture'] == '1' ) ? "selected='selected'" : '' ?>>WS 01 - Einführung</option>
+		<option value="2"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '2' ) || $values['lecture'] == '2' ) ? "selected='selected'" : '' ?>>WS 02 - Perspektivwechsel I</option>
+		<option value="3"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '3' ) || $values['lecture'] == '3' ) ? "selected='selected'" : '' ?>>WS 03 - Perspektivwechsel II</option>
+		<option value="4"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '4' ) || $values['lecture'] == '4' ) ? "selected='selected'" : '' ?>>WS 04 - Perspektivwechsel III</option>
+		<option value="5"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '5' ) || $values['lecture'] == '5' ) ? "selected='selected'" : '' ?>>WS 05 - Clustering und Ausbau</option>
+		<option value="6"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '6' ) || $values['lecture'] == '6' ) ? "selected='selected'" : '' ?>>WS 06 - Bewertung und Selektion</option>
+		<option value="7"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '7' ) || $values['lecture'] == '7' ) ? "selected='selected'" : '' ?>>WS 07 - Vertiefung Perspektivwechsel</option>
+		<option value="8"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '8' ) || $values['lecture'] == '8' ) ? "selected='selected'" : '' ?>>WS 08 - Klass. Kreativistätstechnik</option>
+		<option value="9"  <?php echo (($sr && $rd['posted_form_data']['lecture'] == '9' ) || $values['lecture'] == '9' ) ? "selected='selected'" : '' ?>>WS 09 - Ideenbewertungsprozess</option>
+		<option value="10" <?php echo (($sr && $rd['posted_form_data']['lecture'] == '10') || $values['lecture'] == '10') ? "selected='selected'" : '' ?>>WS 10 - Werbeideen</option>
 	</select>
 	
 	Foliennummer

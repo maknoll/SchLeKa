@@ -64,7 +64,7 @@ if(isset($_POST)) {
     	header('location: ' . $_SERVER['HTTP_REFERER']);
     } else {
     	//redirect back to the output
-    	header('location: http://martinknoll.org/schleka/?question=' . $id );
+    	header('location: http://ieleka.ludwig-jahn.com/?question=' . $id );
     }
-    
+
 }

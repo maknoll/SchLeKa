@@ -38,7 +38,7 @@ if(isset($_POST)) {
       $db = connect();
 	  
       // insert into db
-      pg_query($db, "INSERT INTO questions (question, solution, lecture, slide) VALUES ('{$question}', '{$solution}', '{$lecture}', {$slide})");
+      $res = pg_query($db, "INSERT INTO questions (question, solution, lecture, slide) VALUES ('{$question}', '{$solution}', '{$lecture}', {$slide})");
 
 	  disconnect($db);
 	}

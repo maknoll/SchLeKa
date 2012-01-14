@@ -3,7 +3,7 @@
 body {
 	font-family: Georgia;
 	color: #000;
-	background: #fff;
+	background: #F5F6F7;
 }
 
 
@@ -42,8 +42,15 @@ select {
 	width: 180px;
 }
 
-form#search {
+#search {
 	display: none;
+	padding: 5px;
+
+	margin-top: 8px;
+
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
 }
 
 div#wrapper {
@@ -123,8 +130,16 @@ div#searchbar #lectureset a {
 div#solution {
 	display: none;
 	text-align: left;
-	margin: 4em auto 0 auto;
+	margin: 2em auto 0 auto;
 	width: 800px;
+	background-color: #ffffff;
+	padding: 20px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	-moz-box-shadow: 1px 1px 6px #888;
+	-webkit-box-shadow: 1px 1px 6px #888;
+	box-shadow: 1px 1px 6px #888;
 }
 
 #errors {
@@ -171,4 +186,10 @@ div#solution {
 
 #lecture {
 	margin-right: 30px;
+}
+
+/*böses jQuery*/
+.ui-widget {
+	font-family: Georgia;
+	font-size: 1em;
 }
