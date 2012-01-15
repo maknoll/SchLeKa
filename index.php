@@ -31,27 +31,15 @@ disconnect($db);
 // Selected Lecture
 
 $lecture = array( "WS 01 - Einführung",
-"WS 02 - Erfolg im Studium",
-"WS 03 - Lerntechniken",
-"WS 04 - Ziele 1",
-"WS 05 - Ziele 2",
-"WS 06 - Zeitmanagement 1",
-"WS 07 - Zeitmanagement 2",
-"WS 08 - Präsentationen 1",
-"WS 09 - Präsentationen 2 (Visualisierung)",
-"WS 10 - Präsentationen 3 (Auftritt)",
-"WS 11 - Ideen generieren",
-"SS 01 - Projektmanagement",
-"SS 02 - Teamwork",
-"SS 03 - Diskussionen leiten",
-"SS 04 - Temperamente",
-"SS 05 - Die vier Seiten einer Nachricht",
-"SS 06 - Innovation and Entrepreneurship",
-"SS 07 - Erfolg 1",
-"SS 08 - Erfolg 2",
-"SS 09 - Wissenschaftliches Arbeiten 1",
-"SS 10 - Wissenschaftliches Arbeiten 2",
-"SS 11 - Informatik-Ethik");
+"WS 02 - Perspektivwechsel I",
+"WS 03 - Perspektivwechsel II",
+"WS 04 - Perspektivwechsel III",
+"WS 05 - Clustering und Ausbau",
+"WS 06 - Bewertung und Selektion",
+"WS 07 - Vertiefung Perspektivwechsel",
+"WS 08 - Klass. Kreativistätstechnik",
+"WS 09 - Ideenbewertungsprozess",
+"WS 10 - Werbeideen");
 
 ?>
 
@@ -59,7 +47,7 @@ $lecture = array( "WS 01 - Einführung",
 <html>
  <head>
   <meta charset="utf-8" /> 
-  <title>Schlüko Lernkarten</title>
+  <title>Idea Engineering Lernkarten</title>
   <link rel="stylesheet" href="style/jquery-ui.css" type="text/css" />
   <link rel="stylesheet" href="style/typoframework.css" type="text/css" /> 
   <link rel="stylesheet" href="style/main.css" type="text/css" />
@@ -82,7 +70,7 @@ $lecture = array( "WS 01 - Einführung",
         .data( "autocomplete" )._renderItem = function( ul, item ) {
           return $( "<li></li>" )
             .data( "item.autocomplete", item )
-            .append( "<a>" + __highlight(item.question,$('#search').val()) + "</a>" )
+            .append( "<a>" + highlight(item.question,$('#search').val()) + "</a>" )
             .appendTo( ul );
         };
 
@@ -91,10 +79,35 @@ $lecture = array( "WS 01 - Einführung",
           $('input#search').focus();
         });
 
-        function __highlight(s, t) {
+        function highlight(s, t) {
           var matcher = new RegExp("("+$.ui.autocomplete.escapeRegex(t)+")", "ig" );
           return s.replace(matcher, "<strong>$1</strong>");
         }
+        
+        /*Tastatur-Events*/
+
+        $(document).keydown(function(e){
+          
+
+          switch(e.keyCode)
+          {
+            // user presses the left arrow
+            case 37:  window.location = $('#prev').attr('href');
+                  break;
+
+            // user presses the right arrow
+            case 39:  window.location = $('#next').attr('href');
+                  break;
+                  
+            // user presses the down arrow
+            case 40:  $('#solution').show();
+                  break;
+                  
+            // user presses the up arrow
+            case 38:  $('#solution').hide();
+                  break;
+          }
+        });
 
       });
   </script>
@@ -131,11 +144,11 @@ $lecture = array( "WS 01 - Einführung",
      <p><?php echo(nl2br($values['question'])); ?></p>
      <nav>
       <ul>
-       <li><a href="?question=<?php echo(isset($_GET['lecture']) ? $previous . "&lecture={$_GET['lecture']}" : $previous); ?>">vorherige Frage</a></li>
-       <li><a href="#" onclick="$('#solution').show();">Antwort</a></li>
+       <li><a id="prev" href="?question=<?php echo(isset($_GET['lecture']) ? $previous . "&lecture={$_GET['lecture']}" : $previous); ?>">vorherige Frage</a></li>
+       <li><a id="ant" href="#" onclick="$('#solution').show();">Antwort</a></li>
      	<li><a href="change_form.php?question=<?php echo($id); ?>">ändern</a></li>
        <li><a href="new_form.php">neu</a></li>
-       <li><a href="?question=<?php echo(isset($_GET['lecture']) ? $next . "&lecture={$_GET['lecture']}" : $next); ?>">nächste Frage</a></li>
+       <li><a id="next"href="?question=<?php echo(isset($_GET['lecture']) ? $next . "&lecture={$_GET['lecture']}" : $next); ?>">nächste Frage</a></li>
       </ul>
      </nav>
      <div class="solution" id="solution"><?php echo(nl2br($values['solution'])); ?></div>
